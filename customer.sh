@@ -13,7 +13,8 @@ CUSTOMERS= `aws secretsmanager get-secret-value \
     --output text`
 
 # CONVERT TO JSON RETRIEVE ALL REQUIRED VARIABLES FROM THIS, password or secretkeys
-$password=`"$CUSTOMERS" | jq -r ".password"`
-$account=`"$CUSTOMERS" | jq -r ".account"`
+$customerdetails=`"$CUSTOMERS" | jq -r "\"$customer\`
+$password=`"$customerdetails" | jq -r ".password"`
+$account=`"$customerdetails" | jq -r ".account"`
 
 # login to appropriate platforms using the secretkeys
