@@ -26,4 +26,4 @@ Configure the user with `sh aws configure`
 ### Fetch customer credentials for login
 
 - `./customer customer1@gmail.com`
-- The script will include the logic for api logging depending on platform
+- The script will include the logic for social media login after collecting credentials depending on platform
